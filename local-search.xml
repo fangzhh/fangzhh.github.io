@@ -4,6 +4,45 @@
   
   
   <entry>
+    <title>转发和重定向的区别</title>
+    <link href="/2022/11/27/%E8%BD%AC%E5%8F%91%E5%92%8C%E9%87%8D%E5%AE%9A%E5%90%91/"/>
+    <url>/2022/11/27/%E8%BD%AC%E5%8F%91%E5%92%8C%E9%87%8D%E5%AE%9A%E5%90%91/</url>
+    
+    <content type="html"><![CDATA[<h1 id="转发和重定向有什么区别？"><a href="#转发和重定向有什么区别？" class="headerlink" title="转发和重定向有什么区别？"></a>转发和重定向有什么区别？</h1><p><strong>1、从地址栏来说：</strong><br><strong>转发</strong>是浏览器发送请求给服务器，服务器中的一个资源接受请求，处理信息，然后跳转到另一个组件去处理信息，最后响应给浏览器。转发是在一个服务器内部处理的，所以url地址栏不会发生变化。<br><a href="https://imgse.com/i/zdsLuV"><img src="https://s1.ax1x.com/2022/11/29/zdsLuV.png" alt="zdsLuV.png"></a><br><strong>重定向</strong>是浏览器发送请求给服务器中的一个资源，然后该资源发送一个状态码给浏览器；然后该浏览器根据该状态码，重新发送一个请求给服务器中的另一个资源，然后将该资源响应信息给浏览器，重定向可以定位到不同的服务器，所以url地址栏会改变。<br><a href="https://imgse.com/i/zdsOBT"><img src="https://s1.ax1x.com/2022/11/29/zdsOBT.png" alt="zdsOBT.png"></a><br><strong>2、对数据来说：</strong> 转发可以共享数据，重定向不可以共享数据。<br><strong>3、从效率方面来说：</strong> 转发效率高，重定向效率低。<br><strong>4、应用场景：</strong> 从日常方面来说，转发主要用于项目中用户登录的时候，转发到对应的角色模块<br>重定向主要用户项目中用户注销，跳转到登录页面或者其他网站上。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>cookie和session的区别</title>
+    <link href="/2022/11/24/cookie%E5%92%8Csession/"/>
+    <url>/2022/11/24/cookie%E5%92%8Csession/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、什么是一个会话？"><a href="#一、什么是一个会话？" class="headerlink" title="一、什么是一个会话？"></a>一、什么是一个会话？</h1><p>要理解cookie和session首先要理解什么是会话。<br><strong>会话</strong>：用户打开一个浏览器，点击了很多超链接，访问了多个web资源，然后关闭浏览器，这个过程可以称之为会话。</p><h1 id="二、保持会话的技术有什么呢？"><a href="#二、保持会话的技术有什么呢？" class="headerlink" title="二、保持会话的技术有什么呢？"></a>二、保持会话的技术有什么呢？</h1><ul><li><strong>cookie：</strong>客户端技术（响应，请求）</li><li><strong>session：</strong>服务端技术，利用这个技术，我们可以保存用户的会话信息，我们可以把信息或者数据放在session中。</li><li><strong>生活中有哪个是保持会话呢？</strong><br>网站登录之后，你下次不用再登录了，第二次访问直接就上去了。</li></ul><h1 id="三、这两个技术有什么区别呢？"><a href="#三、这两个技术有什么区别呢？" class="headerlink" title="三、这两个技术有什么区别呢？"></a>三、这两个技术有什么区别呢？</h1><p><strong>1、数据存储位置</strong>：cookie数据存放在客户的<strong>浏览器</strong>上，session数据放在<strong>服务器</strong>上。<br><strong>2、安全性：</strong>cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗  ，考虑到安全应当使用session。<br><strong>3、服务器性能：</strong>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能，考虑到减轻服务器性能方面，应当使用cookie。<br><strong>4、数据大小：</strong>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。<br><strong>5、信息重要程度：</strong>可以考虑将登陆信息等重要信息存放为session，其他信息如果需要保留，可以放在cookie中。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>三层架构</title>
+    <link href="/2022/11/21/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <url>/2022/11/21/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84%E7%9A%84%E7%90%86%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<h1 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h1><p><a href="https://imgse.com/i/zdiZH1"><img src="https://s1.ax1x.com/2022/11/29/zdiZH1.jpg" alt="zdiZH1.jpg"></a></p><h2 id="一、什么是三层架构"><a href="#一、什么是三层架构" class="headerlink" title="一、什么是三层架构"></a>一、什么是三层架构</h2><p>三层架构就是为了符合“<strong>高内聚，低耦合</strong>”思想，把各个功能模块划分为<strong>表示层（UI）</strong>、<strong>业务逻辑层（BLL）</strong>和<strong>数据访问层（DAL）</strong>三层架构，各层之间采用接口相互访问，并通过对象模型的实体类（Model）作为数据传递的载体，不同的对象模型的实体类一般对应于数据库的不同表，实体类的属性与数据库表的字段名一致。（百度百科）</p><hr><h2 id="二、该架构的目的是什么？"><a href="#二、该架构的目的是什么？" class="headerlink" title="二、该架构的目的是什么？"></a>二、该架构的目的是什么？</h2><p>三层架构区分层次的目的是为了 “<strong>高内聚，低耦合</strong>”。开发人员<strong>分工更明确</strong>，将精力更专注于应用系统核心业务逻辑的分析、设计和开发，加快项目的进度，提高了开发效率，有利于项目的更新和维护工作。</p><hr><h2 id="三、怎么理解三层架构？"><a href="#三、怎么理解三层架构？" class="headerlink" title="三、怎么理解三层架构？"></a>三、怎么理解三层架构？</h2><h4 id="1-三层是哪三层，每一层的作用是什么？"><a href="#1-三层是哪三层，每一层的作用是什么？" class="headerlink" title="1.三层是哪三层，每一层的作用是什么？"></a>1.三层是哪三层，每一层的作用是什么？</h4><p><strong>表现层</strong>: 主要是指与用户交互的界面。用于接收用户输入的数据和显示处理后用户需要的数据。<br><strong>业务逻辑层</strong>: 表现层和数据访问层之间的桥梁。实现业务逻辑。业务逻辑具体包含：验证、计算、业务规则等等。<br><strong>数据访问层</strong>: 与数据库打交道。主要实现对数据的增、删、改、查。将存储在数据库中的数据提交给业务层，同时将业务层处理的数据保存到数据库。   </p><h4 id="2-为什么要用三层？"><a href="#2-为什么要用三层？" class="headerlink" title="2.为什么要用三层？"></a>2.为什么要用三层？</h4><h5 id="①结合电商平台理解："><a href="#①结合电商平台理解：" class="headerlink" title="①结合电商平台理解："></a>①结合电商平台理解：</h5><p><a href="https://imgse.com/i/zdkhnJ"><img src="https://s1.ax1x.com/2022/11/29/zdkhnJ.png" alt="zdkhnJ.png"></a><br>一个店铺的大概组成:<strong>客服、仓库人员、生产人员</strong>，那他们分别负责什么呢？<br><strong>客服</strong>：负责与客户打交道，解答客户的问题。<br><strong>仓库人员</strong>：跟客服以及生产人员对接，跟客服对接有什么情况呢。例如需要换地址，退货，换货等等；跟生产线对接有什么情况呢，例如有时候一个商品需求大，这时候就需要生产线加大生产了。<br><strong>生产人员</strong>：负责跟仓库人员对接，以及跟外面的原材料厂商对接，用来生产仓库所需要的商品。<br>现在想想，电商的每个组成部分是不是各自独立的，只要对接好，完成自己的任务就好了，这也可以理解成一种<strong>解耦</strong>的思想。  </p><h5 id="②那我们为什么把他们这样分成几个部分呢？"><a href="#②那我们为什么把他们这样分成几个部分呢？" class="headerlink" title="②那我们为什么把他们这样分成几个部分呢？"></a>②那我们为什么把他们这样分成几个部分呢？</h5><p>结合现实想想，如果把全部任务集合在同一个人身上，那如果他辞职了，是不是这个店铺就运行不了了呢，程序也是和现实差不多。  </p><h5 id="③那这样分部分的好处有什么呢？"><a href="#③那这样分部分的好处有什么呢？" class="headerlink" title="③那这样分部分的好处有什么呢？"></a>③那这样分部分的好处有什么呢？</h5><p>经过这样的结构，各个部分各司其职。如果有哪个部分出了问题只要找相应的部分就可以了。程序也一样，这样解耦后，更有利于我们后期的维护。</p><hr><h1 id="四、三层架构的缺点"><a href="#四、三层架构的缺点" class="headerlink" title="四、三层架构的缺点"></a>四、三层架构的缺点</h1><p>1、降低了系统的性能。这是不言而喻的。如果不采用分层式结构，很多业务可以直接造访数据库，以此获取相应的数据，如今却必须通过中间层来完成。<br>2、有时会导致级联的修改。这种修改尤其体现在自上而下的方向。如果在表示层中需要增加一个功能，为保证其设计符合分层式结构，可能需要在相应的业务逻辑层和数据访问层中都增加相应的代码。<br>3、增加了代码量，增加了工作量。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>面向接口编程</title>
     <link href="/2022/11/20/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%9D%A2%E5%90%91%E6%8E%A5%E5%8F%A3%E7%BC%96%E7%A8%8B/"/>
     <url>/2022/11/20/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%9D%A2%E5%90%91%E6%8E%A5%E5%8F%A3%E7%BC%96%E7%A8%8B/</url>
